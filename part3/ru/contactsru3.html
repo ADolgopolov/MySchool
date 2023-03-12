@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MySchool - Контакты</title>
+  
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+  <!-- Лoкальні сcилки на Bootstrap і стилі головної сторінки-->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../css/contacts.css"> -->
+  <style>
+    .glyphicon-earphone{
+      font-size: 90%;
+      color: red;
+    }
+    .glyphicon-globe{
+      font-size: 90%;
+      color: red;
+    }
+    .glyphicon-envelope{
+      font-size: 90%;
+      color: red;
+    }
+    .glyphicon-tower{
+      font-size: 90%;
+      color: red;
+    }
+    @keyframes tel{
+     50%{transform:rotate(2deg)}
+     100%{transform:rotate(-2deg)}
+    }
+    .tel-anim{
+     animation-name: tel;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+    }
+    .bigerText{
+      font-size: 180%;
+    }
+    .blueText{
+      color: #ccccff;
+    }
+  </style>
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://www.myschool.net.ua/uk/" target="_blank"><img src="../img/logo.svg" alt="MySchool"></a>
+  </div>
+  <div class="collapse navbar-collapse" id="main-menu" >
+    <ul class="nav navbar-nav">
+      <li><a href="../../ru/indexru.html"><span class="glyphicon glyphicon-backward"></span>&nbsp;<i>Часть І</i>&nbsp;<span class="glyphicon glyphicon-backward"></span></a></li>
+      <li><a href="../../part2/ru.html"><span class="glyphicon glyphicon-backward"></span>&nbsp;<i>Часть ІI</i>&nbsp;<span class="glyphicon glyphicon-backward"></span></a></li>
+      <li><a href="../ru.html">Приветствие<span class="sr-only">(current)</span></a></li>
+      <li><a href="dictioneryru3.html">Учебные материалы</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li  class="active"><a href="#">Контакты</a></li>
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">RU
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../ua/contacts3.html">Українська мова</a></li>
+            <li><a href="#">Русский язык</a></li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="allTextContainer" class="container">
+
+  <div class="row">
+    <div class="col-sm-4  col-xs-12">
+      <img src="../img/Ludmila.jpg" class="img-responsive center-block">
+      <br>
+      <p>Людмила Борисовна</p>
+      Руководитель центра изучения иностранных языков «My School».
+    </div>
+    <div class="col-sm-8 col-xs-12">
+      <h1>Ждем Вас.</h1>  
+      <p class="bigerText">
+        Всегда рады ответить на Ваши вопросы:<br>
+        Сайт <span class = "glyphicon glyphicon-globe tel-anim"></span><br><a href="http://www.myschool.net.ua/uk/" target="_blank">www.myschool.net.ua</a><br>
+        Телефон <span class = "glyphicon glyphicon-earphone tel-anim"></span><br><span class="blueText">+3 066 22 777 07</span><br>
+        Е-mail <span class = "glyphicon glyphicon-envelope tel-anim"></span><br><a href="mailto:myschool.irpin@gmail.com">myschool.irpin@gmail.com</a><br>
+        Адрес <span class = "glyphicon glyphicon-tower tel-anim"></span><br><span class="blueText">г. Ирпень, вул. Полтавская 15/2</span><br>
+      </p>
+    </div>
+  </div>
+<br>
+<br>
+</div>
+<footer class="footer navbar-fixed-bottom">
+  <div class = "darkLineBG text-center"><a href="mailto:andriy.dolgopolov@gmail.com"> Copyright&nbsp;&copy;&nbsp;2017 E&#8209;mail:&nbsp;andriy.dolgopolov@gmail.com</a></div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.glyphicon-earphone{
+	font-size: 90%;
+	color: red;
+}
+.glyphicon-globe{
+	font-size: 90%;
+	color: red;
+}
+.glyphicon-envelope{
+	font-size: 90%;
+	color: red;
+}
+.glyphicon-tower{
+	font-size: 90%;
+	color: red;
+}
+@keyframes tel{
+ 50%{transform:rotate(2deg)}
+ 100%{transform:rotate(-2deg)}
+}
+.tel-anim{
+ animation-name: tel;
+ animation-duration: 1s;
+ animation-iteration-count: infinite;
+}
+.bigerText{
+	font-size: 180%;
+}
+.blueText{
+	color: #ccccff;
+}

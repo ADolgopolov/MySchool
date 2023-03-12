@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk-ua">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Граматика - Додаток 1.1</title>
+	  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	  <link rel="stylesheet" type="text/css" href="../css/main.css">
+	  <link rel="stylesheet" type="text/css" href="../css/gramStyle.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://www.myschool.net.ua/uk/" target="_blank"><img src="../images/logo.svg" alt="MySchool"></a>
+  </div>
+  <div class="collapse navbar-collapse" id="main-menu">
+    <ul class="nav navbar-nav">
+      <li><a href="../index.html">Головна<span class="sr-only">(current)</span></a></li>
+      <li class="active"><a href="../dictionery.html#app">Навчальні матеріали<span class="sr-only">(current)</span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="../contacts.html">Контакти</a></li>
+    </ul>
+  </div>
+</nav>
+<div class = "container-fluid">
+	<div class="row">
+		<div id = "topheader" class="col-xs-12 barText darkLine">
+			Склади з букв слово:
+		</div>
+	</div>
+</div>
+	<div class="container-fluid">
+		<div class="row">
+				<audio id="media"></audio>
+				<button id = "question" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 askWord" onclick="soundClick()">&nbsp;</button>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+				<div id = "printer" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 printWord">&nbsp;</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div  id = "btnBlock"></div>
+	</div>
+	<br><br><br><br><br>
+	<footer class="footer navbar-fixed-bottom">
+
+		<div id = "statusbar" class = "container-fluid darkLine barText">&nbsp;</div>
+		<div id="markRuler" class = "container-fluid darkLine" style="display: none">
+			<div class="row" style="margin-left: 0px; margin-right: 0px">
+				<div class="col-xs-1 brd">1</div>
+				<div class="col-xs-1 brd">2</div>
+				<div class="col-xs-1 brd">3</div>
+				<div class="col-xs-1 brd">4</div>
+				<div class="col-xs-1 brd">5</div>
+				<div class="col-xs-1 brd">6</div>
+				<div class="col-xs-1 brd">7</div>
+				<div class="col-xs-1 brd">8</div>
+				<div class="col-xs-1 brd">9</div>
+				<div class="col-xs-1 brd">10</div>
+				<div class="col-xs-1 brd">11</div>
+				<div class="col-xs-1 brd">12</div>
+			</div>
+		</div>
+		<div class="container-fluid darkLine">
+			<div class="progress compactMargin" style="background-color: #333">
+				<div id = "masteryBarSuccess" class="progress-bar progress-bar-success statusbarText" style="width:33%"></div>
+				<div id = "masteryBarDanger" class="progress-bar progress-bar-danger statusbarText" style="width:33%"></div>
+				<div id = "progressBar" class="progress-bar progress-bar-info statusbarText" style="width:34%"></div>
+	  		</div>
+  		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src = "../words/app01_02.js"></script>
+	<script type="text/javascript">
+		var str_goodmark=[];str_goodmark.push("\u041c\u043e\u043b\u043e\u0434\u0435\u0446\u044c!");str_goodmark.push("\u041c\u043e\u043b\u043e\u0434\u0447\u0438\u043d\u043a\u0430!");str_goodmark.push("\u0423\u043c\u043d\u0456\u0447\u043a\u0430!");str_goodmark.push("\u041f\u0440\u043e\u0441\u0442\u043e \u0433\u0435\u043d\u0456\u0439!");str_goodmark.push("\u0412\u0456\u0434\u043c\u0456\u043d\u043d\u043e!");str_goodmark.push("\u0414\u0443\u0436\u0435 \u0434\u043e\u0431\u0440\u0435!");str_goodmark.push("\u0422\u0430\u043b\u0430\u043d\u0442!");
+str_goodmark.push("\u0427\u0443\u0434\u043e\u0432\u043e!");str_goodmark.push("\u0413\u0435\u043d\u0456\u0430\u043b\u044c\u043d\u043e!");str_goodmark.push("\u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e!");str_goodmark.push("\u0421\u0443\u043f\u0435\u0440!");str_goodmark.push("\u0414\u043e\u0431\u0440\u0435!");var str_bedmark=[];str_bedmark.push("\u041d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e.");str_bedmark.push("\u041d\u0435 \u043f\u043e\u0441\u043f\u0456\u0448\u0430\u0439.");
+str_bedmark.push("\u0417\u043a\u043e\u043d\u0446\u0435\u043d\u0442\u0440\u0443\u0439\u0441\u044f.");str_bedmark.push("\u041f\u043e\u0434\u0443\u043c\u0430\u0439.");str_bedmark.push("\u041f\u043e\u043c\u0438\u043b\u043a\u0430.");str_bedmark.push("\u041d\u0456, \u043d\u0435 \u0442\u0430\u043a.");str_bedmark.push("\u041d\u0456! \u041d\u0456! \u041d\u0456!");str_bedmark.push("\u041d\u0435 \u0432\u0456\u0440\u043d\u043e.");str_bedmark.push("\u0414\u0443\u043c\u0430\u0439.");str_bedmark.push("\u041f\u043e\u0433\u0430\u043d\u043e.");
+str_bedmark.push("\u041f\u0440\u0438\u0433\u0430\u0434\u0430\u0439.");str_bedmark.push("\u0417\u0430\u043f\u0430\u043c\u044f\u0442\u0430\u0439.");str_bedmark.push("\u0422\u0438 \u043c\u043e\u0436\u0435\u0448 \u043a\u0440\u0430\u0449\u0435.");str_bedmark.push("\u041c\u0435\u043d\u0456 \u0441\u0443\u043c\u043d\u043e.");str_bedmark.push("\u041d\u0435 \u0441\u043f\u0438!");var str_mark=[];str_mark.push("\u041d\u0443, \u043d\u0430\u0440\u0435\u0448\u0442\u0456.");str_mark.push("\u041e, \u043f\u043e\u043f\u0430\u0432.");
+str_mark.push("\u041f\u0440\u043e\u0434\u043e\u0432\u0436\u0438\u043c\u043e.");str_mark.push("\u0413\u043e\u043b\u043e\u0432\u043d\u0435 \u0443\u0432\u0430\u0433\u0430.");str_mark.push("\u0413\u043e\u043b\u043e\u0432\u043d\u0435 \u0431\u0430\u0436\u0430\u043d\u043d\u044f.");str_mark.push("\u0417\u043d\u0430\u0439\u0448\u043e\u0432. \u041c\u043e\u043b\u043e\u0434\u0435\u0446\u044c.");str_mark.push("\u0426\u0435 \u0432\u0441\u0456\u043c \u0432\u0456\u0434\u043e\u043c\u043e!");
+var QuestionBtn,PrinterDiv,StatusBar,ProgressBar,MasteryBarSuccess,MasteryBarDanger,MarkRuler,ModalAudioTeg,workDicArray=[],currentQuestion_n,firstTimeClick=!0,allAnswers=0,wrongAnswers=0,rightAnsersSuborder=0,strTrueAnswer,wordAnserArr=[],WORD_AMOUNT=20;function getRandomNumber(a){return Math.floor(Math.random()*a)}
+function getRandomGoodMark(){if(1<allAnswers&&1==rightAnsersSuborder)return str_mark[getRandomNumber(str_mark.length)];var a=StatusBar.innerHTML;do var b=str_goodmark[getRandomNumber(str_goodmark.length)];while(b===a);return b}function getRandomBadMark(){var a=StatusBar.innerHTML;do var b=str_bedmark[getRandomNumber(str_bedmark.length)];while(b===a);return b}function writeIn(a,b,c){a.innerHTML=a.clientWidth>b?c:""}
+function showMsgStatusBar(a){StatusBar.innerHTML=a;if(0<allAnswers){a=allAnswers-wrongAnswers;var b=Math.round(workDicArray.length/WORD_AMOUNT*1E4)/100,c=1-b/100;0==c&&(b=Math.round((WORD_AMOUNT-1)/WORD_AMOUNT*1E4)/100,c=1-b/100);var d=Math.round(wrongAnswers/allAnswers*1E4)/100;MasteryBarDanger.style.width=d*c+"%";MasteryBarSuccess.style.width=(100-d)*c+"%";ProgressBar.style.width=b+"%";writeIn(MasteryBarSuccess,16,a+" \u0432\u0456\u0440\u043d\u043e");writeIn(MasteryBarDanger,16,wrongAnswers+" \u043d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e");
+writeIn(ProgressBar,8,workDicArray.length+" \u0437\u0430\u043b\u0438\u0448\u0438\u043b\u043e\u0441\u044c \u0441\u043b\u0456\u0432")}else MasteryBarSuccess.style.width="0%",MasteryBarDanger.style.width="0%",ProgressBar.style.width="100%",writeIn(MasteryBarSuccess,16,""),writeIn(MasteryBarDanger,16,""),writeIn(ProgressBar,8,"\u0412\u0441\u044c\u043e\u0433\u043e \u0441\u043b\u0456\u0432: "+workDicArray.length)}
+function btnDown(){allAnswers+=1;if(this.value===wordAnserArr[0]){rightAnsersSuborder+=1;wordAnserArr.shift();btnBlock.removeChild(this);for(var a=workDicArray[currentQuestion_n].eng.length-wordAnserArr.length,b=workDicArray[currentQuestion_n].eng.substr(0,a);0<workDicArray[currentQuestion_n].eng.length-a;)b+="*",a+=1;PrinterDiv.innerHTML=b;showMsgStatusBar(getRandomGoodMark());StatusBar.style.color="rgb(0, 255, 0)";0===wordAnserArr.length&&setTimeout(initWriter,1E3,currentQuestion_n)}else{rightAnsersSuborder=
+0;wrongAnswers+=1;showMsgStatusBar("\u041f\u043e\u0442\u0440\u0456\u0431\u043d\u043e: <button>"+wordAnserArr[0]+"</button> <br>"+getRandomBadMark());for(StatusBar.style.color="rgb(255, 0, 0)";btnBlock.firstChild;)btnBlock.removeChild(btnBlock.firstChild);setTimeout(outPutBtns,1E3)}}
+function outPutBtns(){for(var a,b=[],c=0;c<wordAnserArr.length;c++)a=document.createElement("input"),a.className="btnChar",a.type="button",a.value=wordAnserArr[c],a.onclick=btnDown,b.push(a);for(;0<b.length;)a=getRandomNumber(b.length),btnBlock.appendChild(b[a]),b.splice(a,1)}
+function initWriter(a){~a&&workDicArray.splice(currentQuestion_n,1);showMsgStatusBar("&nbsp;");if(0==workDicArray.length)document.getElementById("topheader").innerHTML="\u0412\u0456\u0434\u043f\u043e\u0447\u0438\u043d\u044c \u0456 \u0441\u043f\u0440\u043e\u0431\u0443\u0439 \u043f\u0456\u0437\u043d\u0456\u0448\u0435.",QuestionBtn.innerHTML="\u0412\u0456\u0434\u043c\u0456\u043d\u043e!",QuestionBtn.disabled=!0,PrinterDiv.innerHTML="",StatusBar.innerHTML="\u041c\u043e\u043b\u043e\u0434\u0435\u0446\u044c! \u0412\u0438\u043a\u043e\u043d\u0430\u043b\u0438 \u0432\u0441\u0456 \u0437\u0430\u0432\u0434\u0430\u043d\u043d\u044f!!!",
+ProgressBar.style.width="100%",ProgressBar.innerHTML="",MarkRuler.style.display="block";else{currentQuestion_n=getRandomNumber(workDicArray.length);QuestionBtn.innerHTML=workDicArray[currentQuestion_n].ukr;a="";var b=0;0==workDicArray[currentQuestion_n].eng.indexOf("a ")&&(a="a ",b=2);0==workDicArray[currentQuestion_n].eng.indexOf("an ")&&(a="an ",b=3);for(;b<workDicArray[currentQuestion_n].eng.length;)a+="*",wordAnserArr.push(workDicArray[currentQuestion_n].eng.charAt(b)),b+=1;outPutBtns();PrinterDiv.innerHTML=
+a;
+ModalAudioTeg=new Audio("../mp3_app01_02/"+workDicArray[currentQuestion_n].eng+".mp3")}}function soundClick(){ModalAudioTeg.play()}
+window.onload=function(){QuestionBtn=document.getElementById("question");PrinterDiv=document.getElementById("printer");StatusBar=document.getElementById("statusbar");ProgressBar=document.getElementById("progressBar");MasteryBarSuccess=document.getElementById("masteryBarSuccess");MasteryBarDanger=document.getElementById("masteryBarDanger");MarkRuler=document.getElementById("markRuler");ModalAudioTeg=document.getElementById("media");if(0<WORD_AMOUNT)for(var a,b=0;b<WORD_AMOUNT;b++)a=getRandomNumber(DicArray.length),
+workDicArray.push(DicArray[a]),DicArray.splice(a,1);else workDicArray=DicArray.slice(0);initWriter(-1);ProgressBar.innerHTML="\u041a\u0456\u043b\u044c\u043a\u0456\u0441\u0442\u044c \u0441\u043b\u0456\u0432: "+workDicArray.length};
+	</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Словарь - Приложение 1.1</title>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/dicStyle.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<div id="modalDialog" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h1 id = "modalWord" class="modal-title">word</h1>
+      </div>
+      <div class="modal-body">
+        <h3 id = "modalTrans">|transcription|</h3>
+        <audio id="media"></audio>
+        <button type="button" class="btn btn-default btn-lg glyphicon glyphicon-headphones" onclick="soundClick()"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://www.myschool.net.ua/uk/" target="_blank"><img src="../images/logo.svg" alt="MySchool"></a>
+  </div>
+  <div class="collapse navbar-collapse" id="main-menu">
+    <ul class="nav navbar-nav">
+      <li><a href="../ru/indexru.html">Главная<span class="sr-only">(current)</span></a></li>
+      <li class="active"><a href="../ru/dictioneryru.html#app">Учебные материалы<span class="sr-only">(current)</span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="../ru/contactsru.html">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+<div class = "container-fluid">
+  <div class="row">
+    <div id = "topheader" class="col-xs-12 darkLine statusbarText">
+      Выбери правильный перевод слова:
+    </div>
+  </div>
+</div>
+  <div class="container-fluid">
+    <div class="row">
+        <button id = "question" type="button" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 askWord" data-toggle="modal" data-target="#modalDialog">&nbsp;</button>
+    </div>
+  </div>
+  <div>
+    <ul>
+      <li>
+        <div class="container-fluid">
+          <div class="row">
+          <button id="btn1"></button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="container-fluid">
+          <div class="row">
+          <button id="btn2"></button>
+          </div>
+        </div>
+      </li><li>
+        <div class="container-fluid">
+          <div class="row">
+          <button id="btn3"></button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="container-fluid">
+          <div class="row">
+          <button id="btn4"></button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="container-fluid">
+          <div class="row">
+          <button id="btn5"></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <br><br><br><br><br>
+  <footer class="footer navbar-fixed-bottom">
+    <div id = "statusbar" class = "container-fluid darkLine statusbarText">&nbsp;</div>
+    <div id = "markRuler" class = "container-fluid darkLine" style="display: none">
+      <div class="row" style="margin-left: 0px; margin-right: 0px">
+        <div class="col-xs-1 brd">1</div>
+        <div class="col-xs-1 brd">2</div>
+        <div class="col-xs-1 brd">3</div>
+        <div class="col-xs-1 brd">4</div>
+        <div class="col-xs-1 brd">5</div>
+        <div class="col-xs-1 brd">6</div>
+        <div class="col-xs-1 brd">7</div>
+        <div class="col-xs-1 brd">8</div>
+        <div class="col-xs-1 brd">9</div>
+        <div class="col-xs-1 brd">10</div>
+        <div class="col-xs-1 brd">11</div>
+        <div class="col-xs-1 brd">12</div>
+      </div>
+    </div>
+    <div class="container-fluid darkLine">
+      <div class="progress compactMargin" style="background-color: #333">
+        <div id = "masteryBarSuccess" class="progress-bar progress-bar-success statusbar2Text" style="width:33%"></div>
+        <div id = "masteryBarDanger" class="progress-bar progress-bar-danger statusbar2Text" style="width:33%"></div>
+        <div id = "progressBar" class="progress-bar progress-bar-info statusbar2Text" style="width:34%"></div>
+        </div>
+      </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src = "../words/app01_01.js"></script>
+  <script type="text/javascript">
+    var str_goodmark=[];str_goodmark.push("\u042d\u0442\u043e \u0432\u0441\u0435\u043c \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e!");str_goodmark.push("\u041c\u043e\u043b\u043e\u0434\u0435\u0446!");str_goodmark.push("\u041c\u043e\u043b\u043e\u0434\u0447\u0438\u043d\u043a\u0430!");str_goodmark.push("\u0423\u043c\u043d\u0438\u0447\u043a\u0430!");str_goodmark.push("\u041f\u0440\u043e\u0441\u0442\u043e \u0433\u0435\u043d\u0438\u0439!");str_goodmark.push("\u041e\u0442\u043b\u0438\u0447\u043d\u043e!");
+str_goodmark.push("\u0414\u0443\u0436\u0435 \u0434\u043e\u0431\u0440\u0435!");str_goodmark.push("\u041e\u0447\u0435\u043d\u044c \u0445\u043e\u0440\u043e\u0448\u043e!");str_goodmark.push("\u041f\u0440\u0435\u043a\u0440\u0430\u0441\u043d\u043e!");str_goodmark.push("\u0413\u0435\u043d\u0438\u0430\u043b\u044c\u043d\u043e!");str_goodmark.push("\u041f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e!");str_goodmark.push("\u0421\u0443\u043f\u0435\u0440!");str_goodmark.push("\u0425\u043e\u0440\u043e\u0448\u043e!");
+var str_bedmark=[];str_bedmark.push("\u0413\u043b\u0430\u0432\u043d\u043e\u0435 \u0432\u043d\u0438\u043c\u0430\u043d\u0438\u0435.");str_bedmark.push("\u041d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e.");str_bedmark.push("\u041d\u0435 \u0441\u043f\u0435\u0448\u0438.");str_bedmark.push("\u0421\u043a\u043e\u043d\u0446\u0435\u043d\u0442\u0440\u0438\u0440\u0443\u0439\u0441\u044f.");str_bedmark.push("\u041f\u043e\u0434\u0443\u043c\u0430\u0439.");str_bedmark.push("\u041e\u0448\u0438\u0431\u043a\u0430.");
+str_bedmark.push("\u041d\u0435\u0442, \u043d\u0435 \u0442\u0430\u043a.");str_bedmark.push("\u041d\u0435\u0442! \u041d\u0435\u0442! \u041d\u0435\u0442!");str_bedmark.push("\u041d\u0435 \u0432\u0435\u0440\u043d\u043e.");str_bedmark.push("\u041f\u043e\u0434\u0443\u043c\u0430\u0439.");str_bedmark.push("\u041f\u043b\u043e\u0445\u043e.");str_bedmark.push("\u0412\u0441\u043f\u043e\u043c\u043d\u0438.");str_bedmark.push("\u0417\u0430\u043f\u043e\u043c\u043d\u0438.");str_bedmark.push("\u0422\u044b \u043c\u043e\u0436\u0435\u0448\u044c \u043b\u0443\u0447\u0448\u0435.");
+str_bedmark.push("\u041c\u043d\u0435 \u0433\u0440\u0443\u0441\u0442\u043d\u043e.");str_bedmark.push("\u041d\u0435 \u0441\u043f\u0438!");var button1,button2,button3,button4,button5,QuestionDiv,StatusBar,ProgressBar,MasteryBarSuccess,MasteryBarDanger,MarkRuler,ModalWord,ModalTrans,ModalAudioTeg,workDicArray=[],currentQuestion_n,isFirstTimeClick=!0,isFillDataDone=!1,wrongAnsers=0,strTrueAnswer;function getRandomNumber(a){return Math.floor(Math.random()*a)}
+function getRandomUkrWord(a){for(var b=a;b===a;)b=DicArray[getRandomNumber(DicArray.length)].rus;return b}function getWrongAnswersArrUkr(a){for(var b,c,d,e=[];4>e.length;){b=getRandomUkrWord(a);c=!0;for(d=e.length-1;0<=d;--d)e[d]===b&&(c=!1);c&&e.push(b)}return e}function getRandomGoodMark(){var a=StatusBar.innerHTML;do var b=str_goodmark[getRandomNumber(str_goodmark.length)];while(b===a);return b}
+function getRandomBadMark(){var a=StatusBar.innerHTML;do var b=str_bedmark[getRandomNumber(str_bedmark.length)];while(b===a);return b}function writeIn(a,b,c){a.innerHTML=a.clientWidth>b?c:""}
+function showMsgStatusBar(a){StatusBar.innerHTML=a;a=DicArray.length-workDicArray.length;var b=a+wrongAnsers;if(0<b){var c=Math.round(workDicArray.length/DicArray.length*1E4)/100,d=1-c/100;b=Math.round(wrongAnsers/b*1E4)/100;MasteryBarDanger.style.width=b*d+"%";MasteryBarSuccess.style.width=(100-b)*d+"%";ProgressBar.style.width=c+"%";writeIn(MasteryBarSuccess,16,a+" \u0432\u0435\u0440\u043d\u043e");writeIn(MasteryBarDanger,16,wrongAnsers+" \u043d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e");
+writeIn(ProgressBar,8,workDicArray.length+" \u043e\u0441\u0442\u0430\u043b\u043e\u0441\u044c")}else MasteryBarSuccess.style.width="0%",MasteryBarDanger.style.width="0%",ProgressBar.style.width="100%",writeIn(MasteryBarSuccess,16,""),writeIn(MasteryBarDanger,16,""),writeIn(ProgressBar,8,"\u0412\u0441\u0435\u0433\u043e \u0441\u043b\u043e\u0432: "+workDicArray.length)}function setClassDefault(){return"col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 anseWordDefoult"}
+function setClassRightMark(){return"col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 anseWordRight"}function setClassWrongMark(){return"col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 anseWordWrong"}
+function fillData(){button1.className=setClassDefault();button2.className=setClassDefault();button3.className=setClassDefault();button4.className=setClassDefault();button5.className=setClassDefault();"rgb(0, 255, 0)"!=StatusBar.style.color&&showMsgStatusBar("&nbsp;");if(1>workDicArray.length)document.getElementById("topheader").innerHTML="\u041e\u0442\u0434\u043e\u0445\u043d\u0438 \u0438 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439 \u043f\u043e\u0437\u0436\u0435.",QuestionDiv.innerHTML="\u041e\u0442\u043b\u0438\u0447\u043d\u043e!",
+QuestionDiv.disabled=!0,button1.innerHTML="\u041e\u0448\u0438\u0431\u043e\u043a: "+wrongAnsers,button2.innerHTML="&nbsp;",button3.innerHTML="&nbsp;",button4.innerHTML="&nbsp;",button5.innerHTML="&nbsp;",StatusBar.innerHTML="\u041c\u043e\u043b\u043e\u0434\u0435\u0446, \u043f\u0440\u043e\u0448\u043b\u0438 \u0432\u0441\u0435 \u0437\u0430\u0434\u0430\u043d\u0438\u044f!!!",ProgressBar.style.width="100%",ProgressBar.innerHTML="",MarkRuler.style.display="block",btn1.onclick=null,btn2.onclick=null,btn3.onclick=
+null,btn4.onclick=null,btn5.onclick=null;else{currentQuestion_n=getRandomNumber(workDicArray.length);QuestionDiv.innerHTML=workDicArray[currentQuestion_n].eng;var a=getWrongAnswersArrUkr(workDicArray[currentQuestion_n].rus);switch(getRandomNumber(5)){case 0:button1.value=workDicArray[currentQuestion_n].rus;button2.value=a[0];button3.value=a[1];button4.value=a[2];button5.value=a[3];break;case 1:button1.value=a[0];button2.value=workDicArray[currentQuestion_n].rus;button3.value=a[1];button4.value=a[2];
+button5.value=a[3];break;case 2:button1.value=a[0];button2.value=a[1];button3.value=workDicArray[currentQuestion_n].rus;button4.value=a[2];button5.value=a[3];break;case 3:button1.value=a[0];button2.value=a[1];button3.value=a[2];button4.value=workDicArray[currentQuestion_n].rus;button5.value=a[3];break;default:button1.value=a[0],button2.value=a[1],button3.value=a[2],button4.value=a[3],button5.value=workDicArray[currentQuestion_n].rus}button1.innerHTML=button1.value;button2.innerHTML=button2.value;
+button3.innerHTML=button3.value;button4.innerHTML=button4.value;button5.innerHTML=button5.value;ModalWord.innerHTML=workDicArray[currentQuestion_n].eng;ModalTrans.innerHTML=workDicArray[currentQuestion_n].trk;ModalAudioTeg=new Audio("../mp3_app01_01/"+workDicArray[currentQuestion_n].eng+".mp3")}isFillDataDone=!0}
+function btnDown(){if(isFillDataDone)if(isFirstTimeClick)if(isFirstTimeClick=!1,strTrueAnswer=workDicArray[currentQuestion_n].rus,this.value===strTrueAnswer)workDicArray.splice(currentQuestion_n,1),this.className=setClassRightMark(),showMsgStatusBar(getRandomGoodMark()),StatusBar.style.color="rgb(0, 255, 0)",isFirstTimeClick=!0,isFillDataDone=!1,setTimeout(fillData,300);else{wrongAnsers+=1;switch(strTrueAnswer){case button1.value:button1.className=setClassRightMark();break;case button2.value:button2.className=
+setClassRightMark();break;case button3.value:button3.className=setClassRightMark();break;case button4.value:button4.className=setClassRightMark();break;case button5.value:button5.className=setClassRightMark()}this.className=setClassWrongMark();showMsgStatusBar(getRandomBadMark());StatusBar.style.color="rgb(255, 0, 0)"}else this.value===strTrueAnswer&&(isFirstTimeClick=!0,isFillDataDone=!1,fillData())}function soundClick(){ModalAudioTeg.play()}
+window.onbeforeunload=function(){if(10<DicArray.length-workDicArray.length&&0<workDicArray.length)return"\u041e\u0441\u0442\u0430\u043b\u043e\u0441\u044c \u0441\u043b\u043e\u0432: "+workDicArray.length+"."};
+window.onload=function(){QuestionDiv=document.getElementById("question");button1=document.getElementById("btn1");button2=document.getElementById("btn2");button3=document.getElementById("btn3");button4=document.getElementById("btn4");button5=document.getElementById("btn5");StatusBar=document.getElementById("statusbar");ProgressBar=document.getElementById("progressBar");MasteryBarSuccess=document.getElementById("masteryBarSuccess");MasteryBarDanger=document.getElementById("masteryBarDanger");MarkRuler=
+document.getElementById("markRuler");ModalWord=document.getElementById("modalWord");ModalTrans=document.getElementById("modalTrans");ModalAudioTeg=document.getElementById("media");btn1.onclick=btnDown;btn2.onclick=btnDown;btn3.onclick=btnDown;btn4.onclick=btnDown;btn5.onclick=btnDown;workDicArray=DicArray.slice(0);fillData();showMsgStatusBar("\u0421\u043b\u043e\u0432 \u0432 \u0442\u0435\u043c\u0435: "+workDicArray.length)};
+  </script>
+</body>
+</html>

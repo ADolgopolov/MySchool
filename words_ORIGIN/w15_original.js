@@ -1,0 +1,120 @@
+﻿///////////
+/*slint browser:true */
+/* Wake, get up, exercise, wash, shower, bath, brush, comb, shave, put on, take off, dress, wear, breakfast, lunch, dinner, supper, meal, cook, eat, drink, hungry, thirsty, leave, return, go by bus, go by car, go by metro, go on foot, walk, go shopping, pay, buy, price, cost, clean, rest, sleep, begin, finish, end, be on time, be late, which, who, whom, that */
+var DicArray = [];
+
+
+
+
+
+
+DicArray.push({eng: "state", trk: "|steɪt|", ukr: "держава", rus: "государство", snd: "state.mp3"});
+DicArray.push({eng: "politics", trk: "|ˈpɒlɪtɪks|", ukr: "політика", rus: "политика", snd: "politics.mp3"});
+DicArray.push({eng: "society", trk: "|səˈsʌɪɪti|", ukr: "суспільство", rus: "общество", snd: "society.mp3"});
+DicArray.push({eng: "power", trk: "|ˈpaʊə|", ukr: "влада", rus: "власть", snd: "power.mp3"});
+DicArray.push({eng: "government", trk: "|ˈɡʌvərnmənt|", ukr: "уряд", rus: "правительство", snd: "government.mp3"});
+DicArray.push({eng: "parliament", trk: "|ˈpɑːləm(ə)nt|", ukr: "парламент", rus: "парламент", snd: "parliament.mp3"});
+DicArray.push({eng: "mayor", trk: "|mɛː|", ukr: "мер", rus: "мэр ", snd: "mayor.mp3"});
+DicArray.push({eng: "elect", trk: "|ɪˈlɛkt|", ukr: "вибрати", rus: "избирать", snd: "elect.mp3"});
+DicArray.push({eng: "election", trk: "|ɪˈlɛkʃ(ə)n|", ukr: "вибори", rus: "выборы", snd: "election.mp3"});
+DicArray.push({eng: "vote", trk: "|vəʊt|", ukr: "голосувати", rus: "голосовать", snd: "vote.mp3"});
+DicArray.push({eng: "party", trk: "|ˈpɑːti|", ukr: "партія", rus: "партия", snd: "party.mp3"});
+DicArray.push({eng: "freedom", trk: "|ˈfriːdəm|", ukr: "свобода", rus: "свобода", snd: "freedom.mp3"});
+DicArray.push({eng: "army", trk: "|ˈɑːmi|", ukr: "армія", rus: "армия", snd: "army.mp3"});
+DicArray.push({eng: "invade", trk: "|ɪnˈveɪd|", ukr: "вторгнутися", rus: "вторгаться", snd: "invade.mp3"});
+DicArray.push({eng: "defend", trk: "|dɪˈfɛnd|", ukr: "захищати", rus: "защищать", snd: "defend.mp3"});
+DicArray.push({eng: "invasion", trk: "|ɪnˈveɪʒn|", ukr: "вторгнення", rus: "вторжение", snd: "invasion.mp3"});
+DicArray.push({eng: "war", trk: "|wɔː|", ukr: "війна", rus: "война", snd: "war.mp3"});
+DicArray.push({eng: "peace", trk: "|piːs|", ukr: "мир", rus: "мир", snd: "peace.mp3"});
+DicArray.push({eng: "fight", trk: "|fʌɪt|", ukr: "вести бій", rus: "вести бой", snd: "fight.mp3"});
+DicArray.push({eng: "fought", trk: "|fɔːt|", ukr: "вести бій (V2, V3)", rus: "вести бой (V2, V3)", snd: "fought.mp3"});
+DicArray.push({eng: "win", trk: "|wɪn|", ukr: "перемагати", rus: "побеждать", snd: "win.mp3"});
+DicArray.push({eng: "won", trk: "|wʌn|", ukr: "перемагати (V2, V3)", rus: "побеждать (V2, V3)", snd: "won.mp3"});
+DicArray.push({eng: "lose", trk: "|luːz|", ukr: "програвати", rus: "проигрывать", snd: "lose.mp3"});
+DicArray.push({eng: "lost", trk: "|lɒst|", ukr: "програвати (V2, V3)", rus: "проигрывать (V2, V3)", snd: "lost.mp3"});
+DicArray.push({eng: "loss", trk: "|lɒs|", ukr: "програш", rus: "проигрыш", snd: "loss.mp3"});
+DicArray.push({eng: "tax", trk: "|tæks|", ukr: "податок", rus: "податок", snd: "tax.mp3"});
+DicArray.push({eng: "tax-payer", trk: "|tæks ˈpeɪər|", ukr: "платник податків", rus: "налогоплательщик", snd: "tax-payer.mp3"});
+DicArray.push({eng: "reform", trk: "|rɪˈfɔːm|", ukr: "реформа", rus: "реформа", snd: "reform.mp3"});
+DicArray.push({eng: "increase", trk: "|ɪnˈkriːs|", ukr: "збільшити", rus: "увеличивать", snd: "increase.mp3"});
+DicArray.push({eng: "reduce", trk: "|rɪˈdjuːs|", ukr: "зменшити", rus: "уменьшить", snd: "reduce.mp3"});
+DicArray.push({eng: "produce", trk: "|prəˈdjuːs|", ukr: "виробляти", rus: "производить", snd: "produce.mp3"});
+DicArray.push({eng: "production", trk: "|prəˈdʌkʃ(ə)n|", ukr: "виробництво", rus: "производство", snd: "production.mp3"});
+DicArray.push({eng: "build", trk: "|bɪld|", ukr: "будувати", rus: "строить", snd: "build.mp3"});
+DicArray.push({eng: "built", trk: "|bɪlt|", ukr: "будувати (V2, V3)", rus: "строить (V2, V3)", snd: "built.mp3"});
+DicArray.push({eng: "reconstruct", trk: "|riːkənˈstrʌkt|", ukr: "реконструювати", rus: "реконструировать", snd: "reconstruct.mp3"});
+DicArray.push({eng: "design", trk: "|dɪˈzʌɪn|", ukr: "дизайн", rus: "дизайн", snd: "design.mp3"});
+DicArray.push({eng: "knock down", trk: "|ˈnɒkdaʊn|", ukr: "зносити", rus: "сносить", snd: "knock down.mp3"});
+DicArray.push({eng: "restore", trk: "|rɪˈstɔː|", ukr: "відновити", rus: "восстанавливать", snd: "restore.mp3"});
+DicArray.push({eng: "restoration", trk: "|rɛstəˈreɪʃ(ə)n|", ukr: "відновлення", rus: "восстановление", snd: "restoration.mp3"});
+DicArray.push({eng: "found", trk: "|faʊnd|", ukr: "основувати", rus: "основывать", snd: "found.mp3"});
+DicArray.push({eng: "name", trk: "|ˈneɪm|", ukr: "називати", rus: "назвать", snd: "name.mp3"});
+DicArray.push({eng: "foundation", trk: "|faʊnˈdeɪʃ(ə)n|", ukr: "заснування", rus: "основание", snd: "foundation.mp3"});
+DicArray.push({eng: "rename", trk: "|riːˈneɪm|", ukr: "перейменувати", rus: "переименовать", snd: "rename.mp3"});
+DicArray.push({eng: "develop", trk: "|dɪˈvɛləp|", ukr: "розвиватися", rus: "развиваться", snd: "develop.mp3"});
+DicArray.push({eng: "invent", trk: "|ɪnˈvɛnt|", ukr: "винаходити", rus: "изобретать", snd: "invent.mp3"});
+DicArray.push({eng: "discover", trk: "|dɪˈskʌvə|", ukr: "відкрити", rus: "обнаруживать", snd: "discover.mp3"});
+DicArray.push({eng: "discovery", trk: "|dɪˈskʌv(ə)ri|", ukr: "відкриття", rus: "открытие", snd: "discovery.mp3"});
+DicArray.push({eng: "include", trk: "|ɪnˈkluːd|", ukr: "включать", rus: "включати", snd: "include.mp3"});
+DicArray.push({eng: "solve", trk: "|sɒlv|", ukr: "вирішити", rus: "решать", snd: "solve.mp3"});
+DicArray.push({eng: "public opinion", trk: "|ˈpʌblɪk əˈpɪnjən|", ukr: "громадська думка", rus: "общественное мнение", snd: "public opinion.mp3"});
+DicArray.push({eng: "blame", trk: "|bleɪm|", ukr: "звинувачувати", rus: "обвинять", snd: "blame.mp3"});
+DicArray.push({eng: "custom", trk: "|ˈkʌstəm|", ukr: "звичай", rus: "обычай", snd: "custom.mp3"});
+DicArray.push({eng: "generation", trk: "|dʒɛnəˈreɪʃ(ə)n|", ukr: "покоління", rus: "поколение", snd: "generation.mp3"});
+
+DicArray.push({eng: "law", trk: "|lɔː|", ukr: "закон", rus: "закон", snd: "law.mp3"});
+DicArray.push({eng: "crime", trk: "|krʌɪm|", ukr: "злочин", rus: "преступление", snd: "crime.mp3"});
+DicArray.push({eng: "break", trk: "|breɪk|", ukr: "перерва", rus: "перерыв", snd: "break.mp3"});
+DicArray.push({eng: "criminal", trk: "|ˈkrɪmɪn(ə)l|", ukr: "злочинець", rus: "преступник", snd: "criminal.mp3"});
+DicArray.push({eng: "thief", trk: "|θiːf|", ukr: "злодій", rus: "вор", snd: "thief.mp3"});
+DicArray.push({eng: "thieves", trk: "|θiːvz|", ukr: "злодії", rus: "воры", snd: "thieves.mp3"});
+DicArray.push({eng: "steal", trk: "|stiːl|", ukr: "вкрасти", rus: "воровать", snd: "steal.mp3"});
+DicArray.push({eng: "stole", trk: "|stəʊl|", ukr: "вкрасти (V2)", rus: "воровать (V2)", snd: "stole.mp3"});
+DicArray.push({eng: "stolen", trk: "|ˈstəʊlən|", ukr: "вкрасти (V3)", rus: "воровать (V3)", snd: "stolen.mp3"});
+DicArray.push({eng: "rob", trk: "|rɒb|", ukr: "грабувати", rus: "грабить", snd: "rob.mp3"});
+DicArray.push({eng: "robber", trk: "|ˈrɒbə|", ukr: "розбійник", rus: "разбойник", snd: "robber.mp3"});
+DicArray.push({eng: "robbery", trk: "|ˈrɒb(ə)ri|", ukr: "пограбування", rus: "ограбление", snd: "robbery.mp3"});
+DicArray.push({eng: "cheat", trk: "|tʃiːt|", ukr: "обманювати", rus: "обманывать", snd: "cheat.mp3"});
+DicArray.push({eng: "kill", trk: "|kɪl|", ukr: "вбити", rus: "убивать", snd: "kill.mp3"});
+DicArray.push({eng: "murder", trk: "|ˈməːdə|", ukr: "вбивство", rus: "убийство", snd: "murder.mp3"});
+DicArray.push({eng: "murderer", trk: "|ˈməːd(ə)rə|", ukr: "вбивця", rus: "убийца", snd: "murderer.mp3"});
+DicArray.push({eng: "gun", trk: "|ɡʌn|", ukr: "пістолет", rus: "пистолет", snd: "gun.mp3"});
+DicArray.push({eng: "shoot", trk: "|ʃuːt|", ukr: "стріляти", rus: "стрелять", snd: "shoot.mp3"});
+DicArray.push({eng: "shot", trk: "|ʃɒt|", ukr: "стріляти (V2, V3)", rus: "стрелять (V2, V3)", snd: "shot.mp3"});
+DicArray.push({eng: "victim", trk: "|ˈvɪktɪm|", ukr: "жертва", rus: "жертва", snd: "victim.mp3"});
+DicArray.push({eng: "kidnap", trk: "|ˈkɪdnap|", ukr: "викрадати людей", rus: "похищать людей", snd: "kidnap.mp3"});
+DicArray.push({eng: "ransom", trk: "|ˈrans(ə)m|", ukr: "викуп", rus: "викуп", snd: "ransom.mp3"});
+DicArray.push({eng: "guilty", trk: "|ˈɡɪlti|", ukr: "винний", rus: "виновный", snd: "guilty.mp3"});
+DicArray.push({eng: "suspect", trk: "|səˈspekt|", ukr: "підозрюваний", rus: "подозреваемый", snd: "suspect.mp3"});
+DicArray.push({eng: "suspicion", trk: "|səˈspɪʃ(ə)n|", ukr: "підозри", rus: "подозрение", snd: "suspicion.mp3"});
+DicArray.push({eng: "accuse", trk: "|əˈkjuːz|", ukr: "звинуватити", rus: "обвинять", snd: "accuse.mp3"});
+DicArray.push({eng: "accusation", trk: "|akjʊˈzeɪʃ(ə)n|", ukr: "звинувачення", rus: "обвинение", snd: "accusation.mp3"});
+DicArray.push({eng: "court", trk: "|kɔːt|", ukr: "суд", rus: "суд", snd: "court.mp3"});
+DicArray.push({eng: "punish", trk: "|ˈpʌnɪʃ|", ukr: "покарати", rus: "наказать", snd: "punish.mp3"});
+DicArray.push({eng: "punishment", trk: "|ˈpʌnɪʃm(ə)nt|", ukr: "покарання", rus: "наказание", snd: "punishment.mp3"});
+DicArray.push({eng: "prison", trk: "|ˈprɪz(ə)n|", ukr: "в'язниця", rus: "тюрьма", snd: "prison.mp3"});
+DicArray.push({eng: "prisoner", trk: "|ˈprɪz(ə)nə|", ukr: "в'язень", rus: "заключенный", snd: "prisoner.mp3"});
+DicArray.push({eng: "police station", trk: "|pəˈliːs ˈsteɪʃ(ə)n|", ukr: "поліцейська дільниця", rus: "полицейский участок", snd: "police station.mp3"});
+
+DicArray.push({eng: "accident", trk: "|ˈaksɪd(ə)nt|", ukr: "нещасний випадок", rus: "несчастный случай", snd: "accident.mp3"});
+DicArray.push({eng: "disaster", trk: "|dɪˈzɑːstə|", ukr: "катастрофа", rus: "катастрофа", snd: "disaster.mp3"});
+DicArray.push({eng: "danger", trk: "|ˈdeɪn(d)ʒə|", ukr: "небезпека", rus: "опасность", snd: "danger.mp3"});
+DicArray.push({eng: "dangerous", trk: "|ˈdeɪn(d)ʒ(ə)rəs|", ukr: "небезпечний", rus: "опасный", snd: "dangerous.mp3"});
+DicArray.push({eng: "emergency", trk: "|ɪˈməːdʒ(ə)nsi|", ukr: "надзвичайна ситуація", rus: "экстренная ситуация", snd: "emergency.mp3"});
+DicArray.push({eng: "crash", trk: "|kraʃ|", ukr: "авария", rus: "авария", snd: "crash.mp3"});
+DicArray.push({eng: "rule", trk: "|ruːl|", ukr: "правило", rus: "правило", snd: "rule.mp3"});
+DicArray.push({eng: "fine", trk: "|faɪn|", ukr: "штраф", rus: "штраф", snd: "fine.mp3"});
+DicArray.push({eng: "injure", trk: "|ˈɪndʒə|", ukr: "пошкодити", rus: "ранить", snd: "injure.mp3"});
+DicArray.push({eng: "injury", trk: "|ˈɪn(d)ʒ(ə)ri|", ukr: "травма", rus: "травма", snd: "injury.mp3"});
+DicArray.push({eng: "ambulance", trk: "|ˈambjʊl(ə)ns|", ukr: "швидка допомога", rus: "скорая помощь", snd: "ambulance.mp3"});
+DicArray.push({eng: "first aid", trk: "|fəːst eɪd|", ukr: "перша допомога", rus: "первая помощь", snd: "first aid.mp3"});
+DicArray.push({eng: "fire", trk: "|ˈfaɪə|", ukr: "вогонь, пожежа", rus: "огонь, пожар", snd: "fire.mp3"});
+DicArray.push({eng: "fireman", trk: "|ˈfʌɪəmən|", ukr: "пожежник", rus: "пожарный", snd: "fireman.mp3"});
+DicArray.push({eng: "burn", trk: "|bɜːn|", ukr: "горіти", rus: "гореть", snd: "burn.mp3"});
+DicArray.push({eng: "flood", trk: "|flʌd|", ukr: "повінь", rus: "наводнение", snd: "flood.mp3"});
+DicArray.push({eng: "earthquake", trk: "|ˈəːθkweɪk|", ukr: "землетрус", rus: "землетрясение", snd: "earthquake.mp3"});
+DicArray.push({eng: "destroy", trk: "|dɪˈstrɔɪ|", ukr: "знищити", rus: "уничтожать", snd: "destroy.mp3"});
+DicArray.push({eng: "destruction", trk: "|dɪˈstrʌkʃ(ə)n|", ukr: "руйнування", rus: "разрушение", snd: "destruction.mp3"});
+DicArray.push({eng: "damage", trk: "|ˈdamɪdʒ|", ukr: "шкода", rus: "урон", snd: "damage.mp3"});
+DicArray.push({eng: "report", trk: "|rɪˈpɔːt|", ukr: "звіт", rus: "отчет", snd: "report.mp3"});
+DicArray.push({eng: "allege", trk: "|əˈlɛdʒ|", ukr: "стверджувати", rus: "утверждать", snd: "allege.mp3"});

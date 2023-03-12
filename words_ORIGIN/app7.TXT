@@ -1,0 +1,52 @@
+time
+second
+minute
+hour
+day
+daytime
+midnight
+week
+weekday
+weekend
+day off
+month
+season
+year
+holiday
+vacation holidays
+century
+tomorrow
+today
+yesterday
+tonight
+Monday
+Tuesday
+Wednesday
+Thuesday
+Friday
+Saturday
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+winter
+spring
+summer
+autumn
+Christmas
+New year
+Birthday
+o`clock
+in the morning
+in the evening
+in the afternoon
+at night
+What time is it?

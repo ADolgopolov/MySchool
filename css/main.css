@@ -1,0 +1,151 @@
+BODY{
+	background-color: #660033;
+    background-image: url("../images/mainbg.svg");
+	background-repeat: repeat;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* 50px - 38px = 12px
+   12px / 2 = 6px
+   50px - высота меню Navbar по умолчанию */
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* цвет фона и рамки навигационного меню */
+.navbar-default {
+    background-color: #990066;
+    border-color: #ffff00;
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: #ffff99;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ffffff;
+}
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: #ffff99;
+}
+/* Цвет пунктов навигационного меню */
+.dropdown-menu {
+    background-color: #990066;
+}
+.dropdown-menu > li >a {
+    color: #ffff99;
+    background-color: #990066;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: #870054;
+}
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #660033;
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #870054; /*промежуточный*/
+}
+
+/* CSS стили для мобильных устройств */
+/* Цвет рамки у кнопки, которая открывает меню */
+.navbar-default .navbar-toggle {
+    border-color: #ffff00;
+}
+/* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #660033;
+}
+/* Цвет полосочек в кнопочке, которая открывает меню */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffff99;
+}
+ 
+@media (max-width: 767px) {
+/* Цвет пунктов меню в раскрывающихся списках */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffff99;
+    }
+/* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+        background-color: transparent;
+    }
+}
+
+.panel-default {
+    color: #ffff99;
+    background-color: #990066;
+    border-color: #ffff00;
+}
+
+.panel-default > .panel-heading {
+    color: #ffff99;
+    background-color: #660033;
+    border-color: #ffff00;
+}
+
+#allTextContainer {
+	color: #ffff00;
+	text-align: center;
+}
+.darkLineBG{
+	margin: 0px; 
+	padding: 0px;
+	background-color: #990066; 
+	background: linear-gradient(to top, #990066 0%, rgb(27,14,14) 36%, #990066 100%);
+	}
+p {
+	font-size: 130%;
+}
+
+p.longread{
+    font-size: 100%;
+    text-indent: 20px;
+    text-align: justify;
+}
+/*Для кнопки перехода*/
+.btn-default{
+    margin: 5px;
+    color: #ffff99;
+    background-color: #870054;
+    border-color: #ffff00;
+}
+.btn-default:hover,
+.btn-default:focus{
+    background-color: #990066;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+/*Для кнопки перехода  коли нажата з кареточкою*/
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+    color: #ffff99;
+    background-color: #870054;
+    border-color: #ffff00;
+}
+.darkLine{
+    padding-top: 5px;
+    color: #ffff00;
+    background-color: #660033; 
+    background: linear-gradient(to top, #660033 0%, #990066 36%, #660033 100%);
+}
